@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #00FF00; }
+  50% { box-shadow: 0 0 20px #00FF00; }
+  100% { box-shadow: 0 0 5px #00FF00; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+body {
+  @apply bg-black text-white;
+}
+
+.neon-border {
+  @apply border border-[#00FF00] shadow-[0_0_10px_#00FF00];
+}
+
+.neon-text {
+  @apply text-[#00FF00] shadow-[0_0_10px_#00FF00];
+}
+
+.neon-button {
+  @apply bg-black text-[#00FF00] border border-[#00FF00] shadow-[0_0_10px_#00FF00] 
+         hover:bg-[#00FF00] hover:text-black transition-all duration-300 ease-in-out;
+}
+
+.neon-input {
+  @apply bg-black text-white border border-[#00FF00] shadow-[0_0_10px_#00FF00] 
+         focus:shadow-[0_0_20px_#00FF00] transition-all duration-300 ease-in-out;
+}
+
+.tab {
+  @apply px-4 py-2 text-sm font-medium rounded-t-lg transition-all duration-300 ease-in-out;
+}
+
+.tab-active {
+  @apply bg-[#00FF00] text-black shadow-[0_0_10px_#00FF00];
+}
+
+.tab-inactive {
+  @apply text-white hover:text-[#00FF00] hover:shadow-[0_0_10px_#00FF00];
+}
+
+.glow-animation {
+  animation: glow 2s infinite;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
